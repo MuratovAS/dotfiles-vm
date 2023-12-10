@@ -21,7 +21,7 @@ static const float fullscreen_bg[]         = {0.1, 0.1, 0.1, 1.0}; /* You can al
 
 /* Autostart */
 static const char *const autostart[] = {
-        "wbg", "$HOME/.config/wbg/bg.jpg", NULL,
+        "wbg", ".config/wbg/bg.jpg", NULL,
         "dwlb", "-ipc", NULL,
         "sh", "-c", "someblocks -p | dwlb -status-stdin all", NULL,
         NULL /* terminate */
@@ -136,7 +136,6 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 #define TERMCMD "foot" 
-//#define TERMCMD "foot","-c","$HOME/.local/share/foot/foot.ini"
 
 /* commands */
 static const char *termcmd[] = { TERMCMD, NULL };

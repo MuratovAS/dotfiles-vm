@@ -32,8 +32,13 @@ export QT_QPA_PLATFORM="wayland"
 # launch WM
 if [ "$(tty)" = "/dev/tty1" ] ; 
 then
-	export XDG_RUNTIME_DIR=/run/user/$UID
+	killall someblocks wbg dwlb dwl
+	
+	export XDG_RUNTIME_DIR=$HOME/.xdg
 	export XDG_SESSION_DESKTOP=dwl
 	export XDG_CURRENT_DESKTOP=dwl
+
+	mkdir -p $XDG_RUNTIME_DIR
+
 	dbus-run-session dwl
 fi
