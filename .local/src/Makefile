@@ -1,14 +1,8 @@
-# PATHTOBIN = ${HOME}/.local/bin
-# PATHTOBIN := $(shell echo $$(readlink -f $(PATHTOBIN)))
-# PATH := $(PATHTOBIN):$(PATH)
-
-
 all: # mkdir dwl dwlb someblocks wbg dmenu-wayland
 	
 #mkdir: 
-	mkdir -p .local
-	mkdir -p .local/bin
-	mkdir -p .local/share
+	mkdir -p ${HOME}/.local
+	mkdir -p ${HOME}/.local/bin
 
 #dwl: dwl/dwl
 	cd dwl && make
@@ -36,6 +30,3 @@ clean:
 	cd dwl && make clean
 	cd dwlb && make clean
 	cd someblocks && make clean
-
-run:
-	killall someblocks wbg dwlb dwl; dwl
