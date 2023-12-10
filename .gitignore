@@ -1,0 +1,11 @@
+/*
+!design/
+!.gitignore
+!README.md
+!LICENSE
+
+!.profile
+!.zshrc
+
+!.local/
+!.config/
