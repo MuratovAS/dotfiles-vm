@@ -138,8 +138,12 @@ fc-list
 sudo pacman -S libinput wayland wlroots wayland-protocols pkg-config libxkbcommon fcft pixman
 sudo pacman -S meson libpng libjpeg libwebp tllist cairo pango
 
+sudo pacman -S zsh
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-.config/oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-.config/oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+chsh -s $(which zsh)
 
 ----
 

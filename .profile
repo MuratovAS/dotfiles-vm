@@ -26,7 +26,7 @@ export QT_QPA_PLATFORM="wayland"
 #export QT_SCALE_FACTOR="2"
 
 # fix for VMSVGA graphics controller 
-#export WLR_NO_HARDWARE_CURSORS=1
+export WLR_NO_HARDWARE_CURSORS=1
 #export XCURSOR_THEME="Breeze"
 
 # launch WM
